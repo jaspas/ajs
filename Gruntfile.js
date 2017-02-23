@@ -105,8 +105,8 @@ module.exports = function(grunt) {
   // Load the plugin that provides the 'uglify' task.
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-livereload');
-   grunt.loadNpmTasks('grunt-js-beautify');
-
+  grunt.loadNpmTasks('grunt-js-beautify');
+  grunt.loadNpmTasks('angular-http-server');
   // Default task(s).
   grunt.registerTask('default', ['jshint']);
 
