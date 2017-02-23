@@ -1,11 +1,6 @@
-<!doctype html>
-<meta charset = "utf-8">
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="../assets/css/detailpage.css"/>
-    <title>Details</title>
-  </head>
-  <body>
+<meta charset="utf-8">
+
+    <!-- <div ng-app="detailApp" ng-controller="detailCtrl"> -->
     <header>
     <h1>Tauschangebot Details</h1>
 </header>
@@ -55,10 +50,13 @@
         <label>Musterwunsch</label>
 </div>
 <footer>
-<input id="zuruck" type="button" value="Zurück">
-<input id="tauschen" type="button" value="Tauschen">
+  <a ng-ref="#!/tauschangebote">
+    <input id="zuruck" type="button" value="Zurück" onclick="">
+  </a>
+  <a>
+      <input id="tauschen" type="button" value="Inhaber kontaktieren" onclick="alert();">
+  </a>
 </input>
 
 </footer>
-  </body>
-</html>
+<script src="controller/detailpage.js"></script>
