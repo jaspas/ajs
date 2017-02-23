@@ -1,0 +1,39 @@
+footer{
+
+    text-align: center;
+}
+
+h1{
+  text-align: center;
+}
+.inhaber{
+margin: 6px auto 6px auto;
+border: 1px solid black;
+
+}
+body{
+  max-width: 400px;
+
+  margin: 0 auto 0 auto;
+
+}
+h2{
+  font-size: 15px;
+}
+
+.inhaber p,h2{
+  display: inline;
+}
+.artikel{
+
+  margin: 6px auto 6px auto;
+  border: 1px solid black;
+
+}
+
+.wunsch{
+  margin: 6px auto 6px auto;
+  border: 1px solid black;
+
+
+}
