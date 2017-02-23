@@ -1,1 +1,8 @@
-  
+h1 {
+  color: green;
+  text-align: center;
+}
+
+body {
+  background-color: red;
+}

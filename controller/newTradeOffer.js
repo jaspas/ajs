@@ -1,5 +1,14 @@
 $(document).ready(function() {
-  $(document).on("click", ".input-group-addon", function() {
-	   $(this).siblings()[0].prop
-   }));  
+  toggleTextInputDisabled();
 });
+
+function toggleTextInputDisabled() {
+  $(document).on("click", ":checkbox", function() {
+    var tauschInput = $(".input-group-addon").parent().find("input:text");
+    if($(this).prop("checked")) {
+      tauschInput.prop("disabled", false)
+    } else {
+      tauschInput.prop("disabled", true);
+    }
+   });
+}
