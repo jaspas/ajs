@@ -68,6 +68,16 @@ module.exports = function(grunt) {
       files: {
         src: ['Gruntfile.js']
       },
+	  
+	  	jsBeautify:{
+		options:{
+			
+		},
+		files:{
+		'dest/default_options': ['/'], 
+		}
+		
+	}
     },
 
     livereload  : {
@@ -95,6 +105,7 @@ module.exports = function(grunt) {
   // Load the plugin that provides the 'uglify' task.
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-livereload');
+   grunt.loadNpmTasks('grunt-js-beautify');
 
   // Default task(s).
   grunt.registerTask('default', ['jshint']);
