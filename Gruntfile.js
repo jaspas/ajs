@@ -18,8 +18,6 @@ module.exports = function(grunt) {
       src: ['path/to/**/*.css']
     }
   },
-
-
     jshint: {
     options: {
     'bitwise': true,
@@ -96,7 +94,6 @@ module.exports = function(grunt) {
 
 	}
     },
-
     watch: {
   configFiles: {
     files: [ 'Gruntfile.js', 'config/*.js' ],
@@ -105,8 +102,6 @@ module.exports = function(grunt) {
     }
   }
 }
-
-
 });
 
   // Load the plugin that provides the 'uglify' task.
@@ -116,8 +111,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-js-beautify');
   grunt.loadNpmTasks('angular-http-server');
   grunt.loadNpmTasks('grunt-contrib-watch');
-
   grunt.registerTask('default', ['jshint', 'csslint', 'watch']);
-
-
 };
