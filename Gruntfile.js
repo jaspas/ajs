@@ -3,6 +3,23 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    csslint: {
+    strict: {
+      options: {
+        import: 2
+      },
+      src: ['path/to/**/*.css']
+    },
+    lax: {
+      options: {
+        import: false
+      },
+      src: ['path/to/**/*.css']
+    }
+  }
+
+
     jshint: {
     options: {
     'bitwise': true,
@@ -66,17 +83,18 @@ module.exports = function(grunt) {
   },
 
       files: {
-        src: ['Gruntfile.js']
+        src: ['Gruntfile.js'], ['path/to/**/*.css'],
+
       },
-	  
+
 	  	jsBeautify:{
 		options:{
-			
+
 		},
 		files:{
-		'dest/default_options': ['/'], 
+		'dest/default_options': ['/'],
 		}
-		
+
 	}
     },
 
@@ -104,12 +122,11 @@ module.exports = function(grunt) {
 
   // Load the plugin that provides the 'uglify' task.
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-livereload');
   grunt.loadNpmTasks('grunt-js-beautify');
   grunt.loadNpmTasks('angular-http-server');
-  // Default task(s).
-  grunt.registerTask('default', ['jshint']);
 
-
+  grunt.registerTask('default', ['jshint'], ['csslint']);
 
 };
