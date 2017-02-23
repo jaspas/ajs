@@ -70,34 +70,24 @@ module.exports = function(grunt) {
       },
     },
 
-    livereload  : {
-    options   : {
-      base    : 'public',
-    },
-    files     : ['public/**/*']
-  },
-
-
     watch: {
-      somecss: {
-        files: '**/*.css',
-        tasks: ['copy:somecss']
-      },
-      js: {
-        files: '**/*.js',
-        tasks: ['concat']
-      }
-      }
+  configFiles: {
+    files: [ 'Gruntfile.js', 'config/*.js' ],
+    options: {
+      reload: true
+    }
+  }
+}
 
 
 });
 
   // Load the plugin that provides the 'uglify' task.
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-livereload');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['jshint','watch']);
 
 
 
