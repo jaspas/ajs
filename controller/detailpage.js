@@ -7,8 +7,8 @@
 // });
 
 
-angular.module('myApp', ['ngRoute'])
-
+angular.module('mySwapper')
+/*
 .config(function($routeProvider){
   $routeProvider.when("controller/detailpage/:id",
     {
@@ -17,9 +17,9 @@ angular.module('myApp', ['ngRoute'])
       controllerAs: "app"
     }
   );
-})
+})*/
 
-.controller('tauschangebot', function($routeParams) {
+.controller('detailpage', function($routeParams) {
   var self = this;
   self.id = $routeParams.id;
-}
+});

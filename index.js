@@ -10,16 +10,16 @@ angular.module('mySwapper').config (function($routeProvider){
     css: "controller/tauschangebot/tauschangebotController.js"
   })
   .when('/detail', {
-	  controller: "controller/member/detailController",
+	  controller: "detailController",
 	  templateUrl: "controller/member/detail.html",
-	  css: "controller/member/detail.css"
+	  /*css: "controller/member/detail.css"*/
   })
   .when('/new', {
     controller: "newTradeOfferController",
     templateUrl: "controller/newTradeOffer/newTradeOffer.html",
     css: "controller/newTradeOffer/newTradeOffer.css"
-  }).when('/detailpage', {
-    controller: "controller/detailpage",
+  }).when('/detailpage/:id', {
+    controller: "detailpage",
     templateUrl: "controller/detailpage.html"
   });
 });
