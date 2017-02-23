@@ -7,7 +7,7 @@ body {
 body {
 	font: 16px 'Lato', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
-	background-color: dd9;
+	background-color: #dd9;
 	color: #4d4d4d;
 	min-width: 230px;
 	max-width: 550px;
@@ -35,7 +35,9 @@ body {
 
 
 
-
+.content {
+  background-color: #dd9;
+}
 .picture {
 
   margin: 30px 0;
