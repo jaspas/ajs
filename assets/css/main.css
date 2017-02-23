@@ -1,8 +1,4 @@
-h1 {
-  color: green;
-  text-align: center;
-}
-
-body {
-  background-color: red;
+.ng-view {
+  background-color:green;
+  width:300px;
 }
