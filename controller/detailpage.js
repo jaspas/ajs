@@ -1,9 +1,25 @@
 
 
-var app = angular.module('detailApp', []);
-app.controller('detailCtrl', function($scope) {
-    $scope.count = 0;
-    $scope.myFunction = function() {
-        $scope.count++;
-    }
-});
+// var app = angular.module('detailApp', []);
+// app.config (function($routeProvider){
+//   $routeProvider.when('/', {
+//
+// });
+
+
+angular.module('myApp', ['ngRoute'])
+
+.config(function($routeProvider){
+  $routeProvider.when("controller/detailpage/:id",
+    {
+      templateUrl: "/tauschangebot/tauschangebot.html",
+      controller: "tauschangebot",
+      controllerAs: "app"
+    }
+  );
+})
+
+.controller('tauschangebot', function($routeParams) {
+  var self = this;
+  self.id = $routeParams.id;
+}

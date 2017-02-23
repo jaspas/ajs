@@ -106,7 +106,7 @@ module.exports = function(grunt) {
             },
 
             files: {
-                src: ['Gruntfile.js', 'path/to/**/*.css']
+                src: ['Gruntfile.js', '**/*.js', '!node_modules/**']
             }
           },
             // jsBeautify: {
