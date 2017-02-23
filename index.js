@@ -17,5 +17,8 @@ angular.module('mySwapper').config (function($routeProvider){
     controller: "controller/newTradeOffer/newTradeOfferController",
     templateUrl: "controller/newTradeOffer/newTradeOffer.html",
     css: "controller/newTradeOffer/newTradeOffer.css"
+  }).when('/detailpage', {
+    controller: "controller/detailpage",
+    templateUrl: "controller/detailpage.html"
   });
 });
