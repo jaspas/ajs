@@ -6,7 +6,8 @@ angular.module('mySwapper').config (function($routeProvider){
     templateUrl: "controller/startController.html"
   }).when('/tauschangebote', {
     controller: "tauschangebotController",
-    templateUrl: "controller/tauschangebot/tauschangebot.html"
+    templateUrl: "controller/tauschangebot/tauschangebot.html",
+    css: "controller/tauschangebot/tauschangebotController.js"
   })
   .when('/detail', {
 	  controller: "controller/member/detailController",
