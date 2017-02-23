@@ -6,7 +6,8 @@ angular.module('mySwapper').config (function($routeProvider){
     templateUrl: "controller/startController.html"
   }).when('/tauschangebote', {
     controller: "tauschangebotController",
-    templateUrl: "controller/tauschangebot/tauschangebot.html"
+    templateUrl: "controller/tauschangebot/tauschangebot.html",
+    css: "controller/tauschangebot/tauschangebotController.js"
   })
   .when('/detail', {
 	  controller: "controller/member/detailController",
@@ -17,5 +18,8 @@ angular.module('mySwapper').config (function($routeProvider){
     controller: "newTradeOfferController",
     templateUrl: "controller/newTradeOffer/newTradeOffer.html",
     css: "controller/newTradeOffer/newTradeOffer.css"
+  }).when('/detailpage', {
+    controller: "controller/detailpage",
+    templateUrl: "controller/detailpage.html"
   });
 });
