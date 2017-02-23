@@ -2,4 +2,6 @@ angular.module('mySwapper').controller('tauschangebotController', tauschangebotC
 
 function tauschangebotController($scope){
   console.log("hallo from tauschangebote");
+
+  
 }
