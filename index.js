@@ -7,6 +7,7 @@ angular.module('mySwapper').config (function($routeProvider){
   })
   .when('/detail', {
 	  controller: "controller/member/detailController",
-	  templateUrl: "controller/member/detail.html"
+	  templateUrl: "controller/member/detail.html",
+	  css: "controller/member/detail.css"
   });
 });
