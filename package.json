@@ -2,6 +2,7 @@
   "name": "mySwapper",
   "version": "0.1.0",
   "devDependencies": {
+    "angular-css": "^1.0.8",
     "angular-http-server": "1.0.7",
     "grunt": "^1.0.1",
     "grunt-contrib-csslint": "^2.0.0",
