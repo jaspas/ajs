@@ -4,6 +4,31 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        'http-server': {
+
+        'dev': {
+            port: 8282,
+            host: '0.0.0.0',
+            showDir : true,
+            autoIndex: true,
+            ext: 'html',
+            runInBackground: true,
+            logFn: function(req, res, error) { },
+            proxy: 'http://someurl.com',
+            https: {
+                cert: 'cert.pem',
+                key : 'key.pem'
+            },
+            openBrowser : false,
+            customPages: {
+                '/readme': 'README.md',
+                '/readme.html': 'README.html'
+            }
+
+        }
+
+    },
+
         csslint: {
             strict: {
                 options: {
@@ -82,18 +107,18 @@ module.exports = function(grunt) {
 
             files: {
                 src: ['Gruntfile.js', 'path/to/**/*.css']
-            },
-
-            jsBeautify: {
-                options: {
-
-                },
-                files: {
-                    'dest/default_options': ['/']
-                }
-
             }
-        },
+          },
+            // jsBeautify: {
+            //     options: {
+            //
+            //     },
+            //     files: {
+            //         'dest/default_options': ['/']
+            //     }
+            //
+            // }
+        //},
         watch: {
             configFiles: {
                 files: ['Gruntfile.js', 'config/*.js'],
@@ -108,8 +133,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-livereload');
-    grunt.loadNpmTasks('grunt-js-beautify');
-    grunt.loadNpmTasks('angular-http-server');
+    //grunt.loadNpmTasks('grunt-js-beautify');
+    grunt.loadNpmTasks('grunt-http-server');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default', ['jshint', 'csslint', 'watch']);
 };
