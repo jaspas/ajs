@@ -1,0 +1,59 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 14px 'Lato', Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	background-color: #ddb;
+	color: #4d4d4d;
+	min-width: 230px;
+	max-width: 550px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-weight: 300;
+}
+
+#header {
+  display: flex;
+  background-color: #dd9;
+  margin-top: 20px;
+
+}
+
+#main{
+  background-color: #fff;
+  padding-left: 20px;
+  padding-bottom: 5px;
+}
+
+
+
+
+
+.picture {
+
+  margin: 30px;
+
+}
+
+.picture img {
+  border-radius: 100px;
+
+}
+
+
+
+h2 {
+font-size: 32pt;
+    font-weight: 300;
+}
+
+h3 {
+  text-decoration: underline;
+  line-height: 40px
+}
