@@ -55,7 +55,6 @@ module.exports = function(grunt) {
         'supernew': false,
         'validthis': false,
         'noyield': false,
-
         'browser': true,
         'node': true,
         'globals': {
