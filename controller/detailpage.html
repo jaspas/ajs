@@ -1,62 +1,56 @@
 <meta charset="utf-8">
 
-    <!-- <div ng-app="detailApp" ng-controller="detailCtrl"> -->
+<div ng-model="trade" >
 
     <header>
     <h1>Tauschangebot Details</h1>
-</header>
+    </header>
 
-    <div class="inhaber" ng-controller="detailpage" ng-model="trade">
+    <div class="inhaber">
       <div >
         <h2>Inhaber id:</h2>
         <label>{{trade.id}}</label>
       </div>
     <div>
     <h2>Ort:</h2>
-    <label>Musterort</label>
+    <label>{{trade.owner}}</label>
     </div>
     <div>
     <h2>Verf&uumlgbar f&uumlr Tausch:</h2>
-    <label>Musterzeit</label>
+    <label>{{trade.time}}</label>
     </div>
     </div>
     <div class="artikel">
+<div>
+        <img src="../assets/images/Regenschirm.png" alt="TODO get picture" style="width:200px;height:200px;">
 
-        <img src="article_pic.jpg" alt="TODO get picture" style="width:200px;height:200px;">
-
-
+  </div>
       <div>
         <h2>Artikel Name: </h2>
-            <label>Musteraritkelname</label>
+            <label>{{trade.name}}</label>
       </div>
-<div>
-    <h2>Zustand: </h2>
-        <label>Musterzustand</label>
-</div>
       <div>
-        <h2>Artikel Beschreibung: </h2>
-            <label>Musterbeschreibu ngMusterbeschre
-              ibungMusterbeschreibungM
-              usterbeschreibungM
-              usterbesc
-              hreibungMusterbeschrei
-              bungMusterbeschreibungM
-              usterbesch
-              reibung</label>
+          <h2>Zustand: </h2>
+        <label>{{trade.condition}}</label>
       </div>
-</div>
-<div class="wunsch">
-    <h2>Tauschwunsch gegen: </h2>
-        <label>Musterwunsch</label>
-</div>
-<footer>
-  <a href="#!/tauschangebote">
+        <div>
+        <h2>Artikel Beschreibung: </h2>
+            <label>{{trade.description}}</label>
+      </div>
+    </div>
+    <div class="wunsch">
+      <h2>Tauschwunsch gegen: </h2>
+          <label>{{trade.tradeWish}}</label>
+        </div>
+        <footer>
+          <a href="#!/tauschangebote">
     <input id="zuruck" type="button" value="Zurück">
-  </a>
-  <a>
-      <input id="tauschen" type="button" value="Inhaber kontaktieren" onclick="alert();">
-  </a>
-</input>
+    </a>
+    <a>
+      <input id="tauschen" type="button" value="Inhaber kontaktieren" ng-click="alert();">
 
-</footer>
+      </input>
+    </a>
+
+  </footer>
 <script src="controller/detailpage.js"></script>
