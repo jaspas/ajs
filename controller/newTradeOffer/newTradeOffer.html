@@ -1,21 +1,25 @@
-
+<div class = "newTradeOffer" ng-model="newTrade" ng-controller="newTradeOfferController">
     <div class="form-group">
+      <label for="gegenstand">Name:</label>
+      <input type="text" class="form-control gegenstand" ng-model="name">
       <label for="gegenstand">Gegenstand/Dienstleistung:</label>
-      <input type="text" class="form-control gegenstand">
+      <input type="text" class="form-control gegenstand" ng-model="gegenstand">
       <label for="user">User:</label>
-      <input type="text" class="form-control user">
+      <input type="text" class="form-control user" ng-model="user">
       <label for="details">Details:</label>
-      <input type="text" class="form-control details">
+      <input type="text" class="form-control details"ng-model="details">
+      <label for="details">Zustand:</label>
+      <input type="text" class="form-control details"ng-model="zusatand">
       <label for="tauschwuensch">Tauschw&uumlnsche:</label>
       <div class="input-group">
         <span class="input-group-addon">
           <input type="checkbox" aria-label="Checkbox for following text input" class="newCheckbox">
         </span>
-        <input type="text" class="form-control tausch" aria-label="Text input with checkbox" disabled>
+        <input type="text" class="form-control tausch" aria-label="Text input with checkbox" ng-model="tausch" disabled>
       </div>
       <label for="datum">Datum:</label>
-      <input type="text" class="form-control datum">
+      <input type="text" class="form-control datum" ng-model="datum">
       <label for="ort">Ort:</label>
-      <input type="text" class="form-control ort">
-      <input type="button" class ="btn btn-default newButton" value ="Hinzuf&uuml;gen">
+      <input type="text" class="form-control ort" ng-model="ort">
+      <button ng-click="insertNewTrade()" class= "btn-default btn" >Hinzuf&uuml;gen</button>
     </div>
