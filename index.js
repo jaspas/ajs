@@ -23,3 +23,7 @@ angular.module('mySwapper').config (function($routeProvider){
     templateUrl: "controller/detailpage.html"
   });
 });
+
+
+
+//ngResource
