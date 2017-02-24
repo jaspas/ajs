@@ -8,11 +8,13 @@
       <h2>{{member.vorname}}</h2>
       <h2>{{member.name}}</h2>
       <div class="Bewertung">
-        <i class="fa fa-star"  aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star-o" aria-hidden="true"></i>
+        <i class="fa fa-star" ng-class="{true: 'fa-star', false: 'fa-star-o'}[member.rating>=1]" aria-hidden="true"></i>
+        <i class="fa fa-star" ng-class="{true: 'fa-star', false: 'fa-star-o'}[member.rating>=2]" aria-hidden="true"></i>
+        <i class="fa fa-star" ng-class="{true: 'fa-star', false: 'fa-star-o'}[member.rating>=3]" aria-hidden="true"></i>
+        <i class="fa fa-star" ng-class="{true: 'fa-star', false: 'fa-star-o'}[member.rating>=4]" aria-hidden="true"></i>
+        <i class="fa fa-star" ng-class="{true: 'fa-star', false: 'fa-star-o'}[member.rating>=5]" aria-hidden="true"></i>
+        <i class="fa fa-star" ng-class="{true: 'fa-star', false: 'fa-star-o'}[member.rating>=6]" aria-hidden="true"></i>
+        <i class="fa fa-star" ng-class="{true: 'fa-star', false: 'fa-star-o'}[member.rating>=7]" aria-hidden="true"></i>
       </div>
     </div>
   </div>
