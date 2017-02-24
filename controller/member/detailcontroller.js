@@ -1,7 +1,8 @@
 angular.module('mySwapper').controller('detailController', detailController);
 
+
 function detailController($scope/*, $css*/){
-	var member = {
+ $scope.member = {
 		'_id': 5,
 		'name': 'Obama',
 		'firstname': 'Barack',

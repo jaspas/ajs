@@ -1,13 +1,12 @@
 
-
-<div id="content">
+<div id="content"  ng-controller="detailController" ng-model="member">
   <div id="header">
     <div class="picture">
-      <img src="controller/member/img/obama.jpg" alt="obama"  width=200px/>
+      <img src="controller/member/img/obama.jpg" alt="obama"  width=200px/ />
     </div>
     <div class="name">
-      <h2>Barack</h2>
-      <h2>Obama</h2>
+      <h2>{{member.firstname}}</h2>
+      <h2>{{member.name}}</h2>
       <div class="Bewertung">
         <i class="fa fa-star"  aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
@@ -19,17 +18,17 @@
   </div>
 
 
-  <div id="main">
+  <div id="main" >
     <div class="general">
       <h3>Allgemeine Informationen</h3>
       <div>
-        Mitglied seit: tt.mm.yyyy
+        Mitglied seit: {{member.memberSince}}
+      </div>
+      <div  >
+        Wohnort: {{member.location}}
       </div>
       <div>
-        Wohnort: Washington
-      </div>
-      <div>
-        Mail: formerPotus@gmail.com
+        Mail: {{member.email}}
       </div>
     </div>
     <div class="trade">
