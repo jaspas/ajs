@@ -1,10 +1,10 @@
-angular.module('mySwapper',['ngRoute']);
+angular.module('mySwapper',['ngRoute', 'ngResource']);
 
 angular.module('mySwapper').config (function($routeProvider){
   $routeProvider.when('/', {
     controller: "startController",
     templateUrl: "controller/startController.html"
-  }).when('/tauschangebote', {
+  }).when('/tauschangebote',{
     controller: "tauschangebotController",
     templateUrl: "controller/tauschangebot/tauschangebot.html",
     css: "controller/tauschangebot/tauschangebotController.js"
@@ -23,3 +23,7 @@ angular.module('mySwapper').config (function($routeProvider){
     templateUrl: "controller/detailpage.html"
   });
 });
+
+
+
+//ngResource
