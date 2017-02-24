@@ -2,6 +2,7 @@ angular.module('mySwapper').controller('tauschangebotController', tauschangebotC
 
 function tauschangebotController($scope) {
   $scope.tradelist = [{
+      '_id' : 1,
       'name': 'Tasche',
       'owner': 'Vladislav',
       'description': 'Verkaufe meine originale Ledertasche aus Krokodilzähnen',
@@ -10,6 +11,7 @@ function tauschangebotController($scope) {
       'location': 'Kreml'
     },
     {
+      '_id' : 2,
       'name': 'Tasche2',
       'owner': 'Vladislav2',
       'description': 'Verkaufe meine originale Ledertasche aus Krokodilzähnen2',
@@ -18,6 +20,7 @@ function tauschangebotController($scope) {
       'location': 'Kreml2'
     },
     {
+      '_id' : 3,
       'name': 'Tasche3',
       'owner': 'Vladislav3',
       'description': 'Verkaufe meine originale Ledertasche aus Krokodilzähnen3',
@@ -28,6 +31,7 @@ function tauschangebotController($scope) {
   ];
 
   $scope.tradelist.push({
+    '_id' : 4,
     'name': 'Tasche3',
     'owner': 'Vladislav3',
     'description': 'Verkaufe meine originale Ledertasche aus Krokodilzähnen3',
