@@ -34,20 +34,14 @@
     <div class="trade">
       <div class="offer">
         <h3>Angebot</h3>
-        <ul>
-          <li><a href="">Buch 'Being president for Dummies'</a></li>
-          <li>Buch 'White House Interior Design'</li>
+        <ul >
+          <li ng-repeat="trade in member.trades">{{trade.name}}</li>
         </ul>
       </div>
       <div class="completed">
       <h3>Abgeschlossene Tauschgesch&auml;fte</h3>
       <ul>
-        <li>Asterix-Comic</li>
-        <li> Rolling-Stones Fan-T-Shirt
-
-        </li>
-
-
+        <li ng-repeat="trade in member.previousTrades">{{trade.name}}</li>
       </ul>
       </div>
 
