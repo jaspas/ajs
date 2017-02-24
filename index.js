@@ -9,7 +9,7 @@ angular.module('mySwapper').config (function($routeProvider){
     templateUrl: "controller/tauschangebot/tauschangebot.html",
     css: "controller/tauschangebot/tauschangebotController.js"
   })
-  .when('/detail', {
+  .when('/detail/:id', {
 	  controller: "detailController",
 	  templateUrl: "controller/member/detail.html",
 	  /*css: "controller/member/detail.css"*/
