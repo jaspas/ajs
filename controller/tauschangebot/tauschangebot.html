@@ -4,6 +4,10 @@
       <button>Add</button>
     </a>
 
+    <div class = "newTradeOffer" ng-model="newTrade" ng-controller="tauschangebotController">
+
+    </div>
+
 </div>
 <div>
 
@@ -20,29 +24,14 @@
         </tr>
     </thead>
     <tbody class="table-hover">
-        <tr>
-            <td class="text-left"><a href="#!/detailpage/123">Tasche</a></td>
-            <td class="text-left"><a href="#!/detail">Vladislav</a></td>
-            <td class="text-left">January</td>
-            <td class="text-left">$ 50,000.00</td>
-            <td class="text-left">January</td>
-            <td class="text-left">$ 50,000.00</td>
+        <tr ng-repeat="trade in tradelist">
+            <td class="text-left"><a href="#!/detailpage/{{trade._id}}">{{trade.name}}</a></td>
+            <td class="text-left"><a href="#!/detail">{{trade.owner}}</a></td>
+            <td class="text-left">{{trade.description}}</td>
+            <td class="text-left">{{trade.tradeWish}}</td>
+            <td class="text-left">{{trade.time}}</td>
+            <td class="text-left">{{trade.location}}</td>
         </tr>
-        <tr>
-            <td class="text-left">January</td>
-            <td class="text-left">Heinrich</td>
-            <td class="text-left">January</td>
-            <td class="text-left">$ 50,000.00</td>
-            <td class="text-left">January</td>
-            <td class="text-left">$ 50,000.00</td>
-        </tr>
-        <tr>
-            <td class="text-left">January</td>
-            <td class="text-left">JürgenDawaj</td>
-            <td class="text-left">January</td>
-            <td class="text-left">$ 50,000.00</td>
-            <td class="text-left">January</td>
-            <td class="text-left">$ 50,000.00</td>
-        </tr>
+
     </tbody>
 </table>
